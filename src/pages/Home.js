@@ -22,10 +22,15 @@ class Home extends Component {
     todo.id = Math.random();
     // Create a array that contains the current array and the new todo item
     let new_list = [...this.state.todos, todo];
+    //create variable to use as a conditional
+    const inlist = array.find(t => t === todo)
     // Update the local state with the new array.
     this.setState({
-      todos: new_list,
-    });
+      if (inlist) {
+        return todo;
+      },else:{
+      todos: new_list,}
+      });
   };
   deleteTodo = (id) => {
     const todos = this.state.todos.filter((todo) => {
