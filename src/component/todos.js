@@ -18,7 +18,7 @@ const Todos = ({ todos,  deleteTodo }) => {
             {/* Remember, we set the local state of this todo item when the user submits the form in 
             AddTodo.js. All we need to do is return the todo list item {todo.content} */}
             <ListItemButton component="a" href="#simple-list">
-              <Checkbox color="primary" style={ {paddingLeft:0} } onClick={()=>deleteTodo(Todo.it)}/>
+              <Checkbox color="primary" style={ {paddingLeft:0} } onClick={()=>deleteTodo(Todos.it)}/>
               <ListItemText primary={todo.content} secondary={todo.date}/>
             </ListItemButton>
           </Card>

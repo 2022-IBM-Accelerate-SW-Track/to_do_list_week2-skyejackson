@@ -26,10 +26,7 @@ class Home extends Component {
     const inlist = array.find(t => t === todo)
     // Update the local state with the new array.
     this.setState({
-      if (inlist) {
-        return todo;
-      },else:{
-      todos: new_list,}
+      todos: new_list,
       });
   };
   deleteTodo = (id) => {
